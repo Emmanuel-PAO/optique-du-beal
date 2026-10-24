@@ -5,5 +5,5 @@ window.OPTIQUE_CONTACTS = {
   email: 'bealoptique06800@gmail.com',
   site: 'https://www.optiquedubeal.fr/',
   facebook: 'https://www.facebook.com/loptique.dubeal/',
-  instagram: 'https://www.instagram.com/optique.beal/'
+  instagram: 'https://www.instagram.com/optique.du.beal/'
 };
