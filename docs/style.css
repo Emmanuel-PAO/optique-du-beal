@@ -1,0 +1,20 @@
+/* Le visuel reste entier. Les liens suivent ses coordonnées sur tous les écrans. */
+:root { color-scheme:light; background:#f8f3e7; }
+*,*::before,*::after { box-sizing:border-box; }
+html { margin:0; min-height:100%; -webkit-text-size-adjust:100%; }
+body { margin:0; min-height:100vh; min-height:100svh; background:#f8f3e7; color:#24391f; }
+#application { width:100%; min-height:100vh; min-height:100svh; display:grid; place-items:center; }
+.stage { position:relative; width:100%; max-width:560px; margin-inline:auto; aspect-ratio:9/16; }
+.poster { display:block; width:100%; height:auto; pointer-events:none; user-select:none; -webkit-user-drag:none; }
+.contact-hotspot { position:absolute; left:7.407407%; width:85.185185%; height:9.895833%; border-radius:clamp(14px,4.3vw,38px); background:transparent; cursor:pointer; -webkit-tap-highlight-color:#ffffff24; touch-action:manipulation; }
+.email { top:44.53125%; }
+.site { top:55.598958%; }
+.facebook { top:66.666667%; }
+.instagram { top:77.734375%; }
+.contact-hotspot:focus-visible { outline:3px solid #fff; outline-offset:-6px; box-shadow:0 0 0 3px #24391f; }
+.contact-hotspot:active { background:#ffffff13; }
+.visually-hidden { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+/* Sur ordinateur, la carte entière tient en hauteur. Sur petit écran horizontal,
+   une largeur minimale préserve la taille des cibles et autorise le défilement. */
+@media(min-width:600px) { .stage { width:calc(100svh * 9 / 16); min-width:340px; max-width:560px; } }
+@media(prefers-reduced-motion:reduce) { * { scroll-behavior:auto!important; } }
